@@ -5,4 +5,4 @@ The cornerstone of the production environment. This VM will emulate the function
 
 ## Ensure the appropriate network settings and firewall rules to establish a connection to the VM using the RDP protocol.
 Virtual machine deployed: 
-![alt text](image.png)
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/ebb07f9b-e09d-4c29-a279-01f16953c154)
