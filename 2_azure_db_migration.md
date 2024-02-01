@@ -66,3 +66,10 @@ Migration complete:
 ## Task 6: 
 Confirm the success of the database migration process, carry out a comprehensive validation. 
 Thoroughly inspect the data, schema, and any configurations of the migrated database, ensuring that the migration has been executed successfully and adheres to principles of data integrity.
+checking schema of both databases:
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/1f303eac-c25f-4ae1-9a36-82661b6cc0d5)
+
+migrated database has fire rules and migration status tables
+
+Comparing columns names and datatypes in both databases:
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/95e3e97c-78a2-4f0d-8c46-17607b4f2652)
