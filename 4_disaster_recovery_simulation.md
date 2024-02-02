@@ -7,12 +7,13 @@ Ensure that you document this simulated data loss meticulously. This documentati
 ### Precautions When Mimicking Data Loss
 When mimicking data loss scenarios, exercise caution to avoid unintended consequences. Follow these precautions:
 -  Use Non-Production Environments: Perform data loss testing in non-production environments to prevent any impact on live data and operations
-1.1 Azure Virtual Machine was created under the name test-vm.  
+1.1 Azure Virtual Machine was created under the name test-vm with Azure Data Studio installed and other tools.  
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/31ac5f50-088e-46eb-88de-b7eabbfb98fb)
-1.2. Install sql server and ssms in non-production environment.
-- created a back up file. 
--  Backup the Database: Take a backup of the database before initiating any data loss scenarios, ensuring you can revert to a known good state if needed
--  -  Involve Stakeholders: Inform relevant stakeholders about the testing process to avoid misunderstandings and maintain transparency
+
+Azure Data Studio should have a connection establish to a production Azure SQL Database, which hosts adventure-works-before database.
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/0d993893-0355-43d3-b283-e965d649dba9)
+
+-  Involve Stakeholders: Inform relevant stakeholders about the testing process to avoid misunderstandings and maintain transparency
   #### Sample communication:
 Dear colleagues,
 
@@ -32,35 +33,33 @@ Thank you for your attention to this important exercise.
 Best Regards,
 
 ### 
--- Intentional deletion
--- Intentional Data Corruption
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/23b0353b-41c3-434b-b7c0-ebc48b9937b8)
-
-###
-
-Document the Process: Record the steps followed and the outcomes during testing for documentation and analysis
-#### Checking the database in Azure Data Studio:
-if column 'title' is removed from Person table. 
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/f5a9f43a-3ba9-430d-a002-a3563cc909e7)
-
-if city is set 'not known' in column CIty in the table person.address:
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/efb98857-4186-4b86-9e10-037c0f460990)
-
 After completing the simulation, confirm its success by examining the Azure SQL Database using the connection already established in Azure Data Studio.
+
+-- Intentional deletion
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/5892fdf8-7b76-4085-ab97-bf99a28727b8)
+
+-- Intentional Data Corruption
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/290d5511-ff50-4698-b7b2-67cef926261a)
+City value replaced with 'Not Known'
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/f1140b0d-d80b-4af1-a568-737c4f3078e0)
 
 
 ## Task 2: Restore Database from Azure SQL Database Backup 
-Navigate to the Azure portal and from the Azure SQL Database dashboard, locate and select the target database that needs restoration
+Navigate to the Azure portal and from the Azure SQL Database dashboard, locate and select the target database that needs restoration.
+From the SQL Database Home Page select the Restore option at the top bar on the page:
 
-From the SQL Database Home Page select the Restore option at the top bar on the page
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/cf6a8819-e112-415f-a682-ccf3d2ff2894)
+Deployment of restored Database in Azure portal:
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/94901c28-9208-4c9b-82a9-751559200eea)
 
-City restored: 
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/a9803fdc-8290-4ce3-b763-ff8624681ebb)
+### Set connection to restored database using Azure Data Studio.
+City restored
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/6a9ba8c2-20cc-4f86-8036-25d9a1b69a43)
 
 Column 'Title' restored:
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/9834acf4-b82c-4255-a39e-903b9efbdadb)
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/796e5308-bfc7-4086-a03a-fdc39cf247df)
+
 
 Corrupted database removed:
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/b88fef00-d4e6-461b-96f2-9ac223262505)
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/caf93452-ebb6-46e1-af1a-f898067d0087)
+
 
