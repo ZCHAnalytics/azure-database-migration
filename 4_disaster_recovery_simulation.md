@@ -36,12 +36,31 @@ Best Regards,
 -- Intentional Data Corruption
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/23b0353b-41c3-434b-b7c0-ebc48b9937b8)
 
-
 ###
 
 Document the Process: Record the steps followed and the outcomes during testing for documentation and analysis
+#### Checking the database in Azure Data Studio:
+if column 'title' is removed from Person table. 
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/f5a9f43a-3ba9-430d-a002-a3563cc909e7)
+
+if city is set 'not known' in column CIty in the table person.address:
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/efb98857-4186-4b86-9e10-037c0f460990)
+
 After completing the simulation, confirm its success by examining the Azure SQL Database using the connection already established in Azure Data Studio.
 
 
 ## Task 2: Restore Database from Azure SQL Database Backup 
+Navigate to the Azure portal and from the Azure SQL Database dashboard, locate and select the target database that needs restoration
+
+From the SQL Database Home Page select the Restore option at the top bar on the page
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/cf6a8819-e112-415f-a682-ccf3d2ff2894)
+
+City restored: 
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/a9803fdc-8290-4ce3-b763-ff8624681ebb)
+
+Column 'Title' restored:
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/9834acf4-b82c-4255-a39e-903b9efbdadb)
+
+Corrupted database removed:
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/b88fef00-d4e6-461b-96f2-9ac223262505)
 
