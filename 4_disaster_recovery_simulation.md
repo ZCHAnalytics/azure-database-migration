@@ -10,11 +10,9 @@ When mimicking data loss scenarios, exercise caution to avoid unintended consequ
 1.1 Azure Virtual Machine was created under the name test-vm.  
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/31ac5f50-088e-46eb-88de-b7eabbfb98fb)
 1.2. Install sql server and ssms in non-production environment.
-   
-   
+- created a back up file. 
 -  Backup the Database: Take a backup of the database before initiating any data loss scenarios, ensuring you can revert to a known good state if needed
--  
--  Involve Stakeholders: Inform relevant stakeholders about the testing process to avoid misunderstandings and maintain transparency
+-  -  Involve Stakeholders: Inform relevant stakeholders about the testing process to avoid misunderstandings and maintain transparency
   #### Sample communication:
 Dear colleagues,
 
@@ -34,12 +32,14 @@ Thank you for your attention to this important exercise.
 Best Regards,
 
 ### 
+-- Intentional deletion
+-- Intentional Data Corruption
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/23b0353b-41c3-434b-b7c0-ebc48b9937b8)
+
+
+###
 
 Document the Process: Record the steps followed and the outcomes during testing for documentation and analysis
-
-By mimicking data loss in a controlled environment and testing disaster recovery procedures regularly, organizations can ensure that they are well-prepared to handle real-life incidents and minimize the impact on critical business operations.
-
-
 After completing the simulation, confirm its success by examining the Azure SQL Database using the connection already established in Azure Data Studio.
 
 
