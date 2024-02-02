@@ -41,7 +41,12 @@ finished setting up weekly backup with container name and its URL:
 refresh and check if execute works:
 
 
-Execution failed:
+Execution failed: Server agent error
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/244ab031-6609-43ee-ad8e-f785c983908f)
+
+Need to add forward slash in the end of URL:
+
+![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/26eb2bd2-f2d5-44c4-b8b8-2382cd740c8a)
 
 
 
