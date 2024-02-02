@@ -40,7 +40,6 @@ finished setting up weekly backup with container name and its URL:
 
 refresh and check if execute works:
 
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/089a3785-e56d-4d96-bec0-6e24017226e8)
 
 Execution failed:
 
