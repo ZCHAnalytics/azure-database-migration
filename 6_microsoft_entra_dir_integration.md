@@ -2,10 +2,10 @@
 We need to enable Microsoft Entra ID authentication for the SQL Server that hosts the Azure SQL production database. This steps integrates Microsoft Entra ID as a trusted identity provider, allowing users to authenticate using their Microsoft Entra credentials.
 
 ## 1.  Configure Microsoft Entra ID for Azure SQL database
-### 1.1.  We open the SQL server that hosts the primary database in the Azure portal ☁️:
+### 1.1.  We open the SQL server that hosts the primary database in the Azure portal : ☁️
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/d3ef9321-2cb0-4cee-9978-66720f05a090)
 
-### 1.2.  📝 We select a Microsoft Entra admin who will have authority over user management and access control: 
+### 1.2.  We select a Microsoft Entra admin who will have authority over user management and access control: 📝 
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/d5c4f029-ccf7-4608-8b09-955a8754480d)
 
 ### 1.3.  We test the user by using their Microsoft Entra ID credentials to connect to the primary database in Azure Data Studio: 
@@ -14,7 +14,7 @@ We need to enable Microsoft Entra ID authentication for the SQL Server that host
 ### 1.4.  Connection was set up successfully: 
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/51d5ddbb-0069-4ae5-956c-b265a88f5f9f)
 
-## 2. 📗 We create DB Reader User with read-only privileges nd test their access 
+## 2.  We create DB Reader User with read-only privileges nd test their access 📗
 ### 2.1.  In the Azure Portal, we generate a new user account with reading rights:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/fcb55e68-9ca3-492c-b3b5-17315e4373c2)
 
