@@ -1,65 +1,54 @@
-# Disaster Recovery Simulation
+# Disaster Recovery Simulation  ⚡
 
-## Task 1: Mimic Data Loss in Production Environment
-Deliberately remove critical data from the production database to replicate a scenario where data integrity is compromised. 
-
-Ensure that you document this simulated data loss meticulously. This documentation will serve as a blueprint for the recovery testing.
-### Precautions When Mimicking Data Loss
-When mimicking data loss scenarios, exercise caution to avoid unintended consequences. Follow these precautions:
--  Use Non-Production Environments: Perform data loss testing in non-production environments to prevent any impact on live data and operations
-1.1 Azure Virtual Machine was created under the name test-vm with Azure Data Studio installed and other tools.  
+## 1.  Mimic data loss in production environment
+❗ When mimicking data loss scenarios, we need to exercise caution to avoid unintended consequences and take some precautions. 
+### 1.1. Use non-production environments:
+We perform data loss testing in non-production environments to prevent any impact on live data and operations:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/31ac5f50-088e-46eb-88de-b7eabbfb98fb)
+### 1.3.  Create backups and documentation: 
+We created full backup file with one copy stored on a local server and one in the cloud blob container and documented every step of the process (in this project they are provided in the form of screenshots).
 
-Azure Data Studio should have a connection establish to a production Azure SQL Database, which hosts adventure-works-before database.
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/0d993893-0355-43d3-b283-e965d649dba9)
+### 1.2. Involve stakeholders:
+📧 We inform relevant stakeholders about the testing process to avoid misunderstandings and maintain transparency.
 
--  Involve Stakeholders: Inform relevant stakeholders about the testing process to avoid misunderstandings and maintain transparency
-  #### Sample communication:
-Dear colleagues,
+      **SAMPLE COMMUNICATION** 
 
-We will be conducting a Database Disaster Recovery Exercise over the upcoming weekend, starting at 18:00 pm and concluding by 11:59 pm on 3 February.
+      Dear colleagues, 
+      
+      We will be conducting a Database Disaster Recovery Exercise over the upcoming weekend, starting at 18:00 pm and concluding by 11:59 pm on 3 February.
 
-This exercise aims to test and ensure the effectiveness of our disaster recovery procedures, helping us enhance our system's resilience and reduce downtime in case of unforeseen events.
+      This exercise aims to test and ensure the effectiveness of our disaster recovery procedures, helping us enhance our system's resilience and reduce downtime in case of unforeseen events.
 
-Impact on Operations:
-During this period, there may be a temporary disruption in database access. However, we have taken measures to limit any impact on normal business operations.
+      Impact on Operations:
 
-Our support team will be available to address any queries.
+      During this period, there may be a temporary disruption in database access. However, we have taken measures to limit any impact on normal business operations.
 
-We appreciate your understanding and cooperation in this matter. If you have any concerns or require further information, please feel free to contact the support team at aicore@ai.core. 
+      Our support team will be available to address any queries.
 
-Thank you for your attention to this important exercise.
+      We appreciate your understanding and cooperation in this matter. 
+      
+      If you have any concerns or require further information, please feel free to contact the support team at aicore@ai.core. 
 
-Best Regards,
+      Thank you for your attention to this important exercise.
+      
+      Best Regards,
+    
+### 1.4.  Confirm data deletion and corruption:
+We deleted the column 'Title' in the table 'Person' and replaced all values in the column 'City' in the table 'address' with 'Not Known'.
+<p float="left">
+  <img src="https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/5892fdf8-7b76-4085-ab97-bf99a28727b8" width="500"/>
+  <img src="https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/f1140b0d-d80b-4af1-a568-737c4f3078e0" width="500"/>
+</p>  
 
-### 
-After completing the simulation, confirm its success by examining the Azure SQL Database using the connection already established in Azure Data Studio.
-
--- Intentional deletion
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/5892fdf8-7b76-4085-ab97-bf99a28727b8)
-
--- Intentional Data Corruption
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/290d5511-ff50-4698-b7b2-67cef926261a)
-City value replaced with 'Not Known'
-![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/f1140b0d-d80b-4af1-a568-737c4f3078e0)
-
-
-## Task 2: Restore Database from Azure SQL Database Backup 
-Navigate to the Azure portal and from the Azure SQL Database dashboard, locate and select the target database that needs restoration.
-From the SQL Database Home Page select the Restore option at the top bar on the page:
-
-Deployment of restored Database in Azure portal:
+## 2.  ☁️ Restore database from the cloud backup 
+### 2.1. In the Azure storage, we locate the target database that needs restoration and proceed to restoring it:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/94901c28-9208-4c9b-82a9-751559200eea)
 
-### Set connection to restored database using Azure Data Studio.
-City restored
+### 2.2.  We check the values in the column 'City' have been restored 👍:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/6a9ba8c2-20cc-4f86-8036-25d9a1b69a43)
 
-Column 'Title' restored:
+### 2.3.  We check the presence of deleted column 'Title' 👍:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/796e5308-bfc7-4086-a03a-fdc39cf247df)
 
-
-Corrupted database removed:
+### 2.4. We then remove the corrupted database:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/caf93452-ebb6-46e1-af1a-f898067d0087)
-
-
