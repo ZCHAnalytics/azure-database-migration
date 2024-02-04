@@ -1,7 +1,7 @@
 # Set up an Azure SQL Database ☁️ 
 
 ## 1. Create an Azure SQL Database in the cloud, which will serve as the target for migrating  on-premise database
-### 1.1.  An Azure SQl Database was created using SQL login as the chosen authentication method 🔑: 
+### 1.1.  An Azure SQL Database was created using SQL login as the chosen authentication method 🔑: 
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/46391c24-75b8-433d-b9ca-16c1093ccc67)
 
 ### 1.2.  Set firewall rule 🔥 in Visual Studio Code
@@ -11,7 +11,7 @@
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/281aa30a-00b9-4c54-9ec6-0ff8ac9c635c)
 
 ## 2.  Prepare for migration 
-### 2.1.  Configure Azure Data Studio on the production Windows 🏢: 
+### 2.1.  Configure Azure Data Studio on the production Windows machine 🏢: 
 Install and connect Azure Data Studio to the cloud database.
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/b6ca324f-a84e-4903-ac4c-3fab788d7ace)
 
@@ -38,7 +38,7 @@ Use Azure Data Studio to establish a connection to the newly created Azure SQL D
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/e5c11b73-7df9-415d-a7c4-adfab5431df4)
 
 ## 6.  Validation of successful  database migration process ✌️
-### 6.1.  Check schemas in both databases:
+### 6.1.  Compare schemas in both databases:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/1f303eac-c25f-4ae1-9a36-82661b6cc0d5)
 ### 6.2.  Compare columns names and their datatypes in both databases:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/95e3e97c-78a2-4f0d-8c46-17607b4f2652)
