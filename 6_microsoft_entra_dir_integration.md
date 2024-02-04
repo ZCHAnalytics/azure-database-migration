@@ -14,7 +14,7 @@ We need to enable Microsoft Entra ID authentication for the SQL Server that host
 ### 1.4.  Connection was set up successfully: 
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/51d5ddbb-0069-4ae5-956c-b265a88f5f9f)
 
-## 2.  We create DB Reader User with read-only privileges nd test their access 📗
+## 2.  We create DB Reader User with read-only privileges and test their access 📗
 ### 2.1.  In the Azure Portal, we generate a new user account with reading rights:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/fcb55e68-9ca3-492c-b3b5-17315e4373c2)
 
