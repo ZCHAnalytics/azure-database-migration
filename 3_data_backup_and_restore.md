@@ -1,7 +1,7 @@
 # Data Backup and Restore
 
 ## 1.  Generate a full backup of the on-premise database 
-Using SSMS tool, we create a backup that essentially duplicates the database, providing a safety net in the event of unforeseen issues.
+Using SSMS tool, we create a backup, providing a safety net in the event of unforeseen issues.
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/211d41d5-969d-43c0-bbf0-f33a130ef1c8)
 
 
@@ -31,5 +31,5 @@ We utilise SSMS to automates regular backups of the development database:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/958ca779-763d-443a-b64c-2f357a4679ca)
 
 
-### 4.3.  We execute the new maintenance plan and check the cloud container if the back was created successfully:
+### 4.3.  We execute the new maintenance plan and check the cloud container if the backup was created successfully:
 ![image](https://github.com/ZCHAnalytics/azure-database-migration319/assets/146954022/bdaed841-37cc-4650-bdd8-598102cbecf8)
