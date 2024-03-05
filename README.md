@@ -27,8 +27,3 @@ This project focuses on the design and implementation of a cloud-based database 
 
 ## License
 This project is licensed under the terms of the MIT license.
-
-
-## Acknowledgments
-Special thanks to my AICore support engineers A., B., H., I., I., J., K., M., M., V., W., for their invaluable assistance and latest hacks! This journey wouldn't be as epic without their guidance. 🏆 🏅
-
